@@ -176,7 +176,7 @@ void* manager(void *arg)
     int queueSize = 0, liveNum = 0, busyNum = 0, idleNum = 0, minNum = 0, maxNum = 0;
     while (!pool->shutdown)
     {
-//        sleep(3);
+        sleep(3);
         pthread_mutex_lock(&pool->poolMutex);
         queueSize = pool->queueSize;
         liveNum = pool->liveNum;

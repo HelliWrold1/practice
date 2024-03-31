@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
     int fd = socket(AF_INET, SOCK_STREAM, 0);
     if (fd == -1)
     {
-        perror("socket");
+        perror("socket_multithreads");
         return -1;
     }
     // 连接服务器

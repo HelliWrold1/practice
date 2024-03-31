@@ -5,9 +5,13 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(practice
+add_executable(practice_multithreads_server
         threadpool/threadpool.c
-        threadpool/threadpool.h socket/server.c socket/client.c socket/socket.h main.c socket_eventio/server.c)
+        socket_multithreads/server.c socket_multithreads/socket.h main.c)
+
+add_executable(practice_multithreads_client
+        socket_multithreads/client.c socket_multithreads/socket.h socket_multithreads/server.c threadpool/threadpool.c)
+
 add_executable(practice_eventio
         socket_eventio/server.c log/log.c)
 
