@@ -10,8 +10,4 @@ add_subdirectory(threadpool)
 add_subdirectory(socket_multithreads)
 add_subdirectory(socket_eventio)
 add_subdirectory(socket_multithreads_eventio)
-
-add_executable(practice_multithreads_select
-        socket_multithreads_eventio/server.c)
-
-target_link_libraries(practice_multithreads_select log)
+add_subdirectory(socket_epoll)
